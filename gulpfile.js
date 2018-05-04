@@ -6,18 +6,82 @@ gulp.task('images', function () {
     .pipe($.responsive({
       '*': [
       {
-        width: 1200,
+        width: 2400,
         rename: {
-          suffix: '-1200px',
+          suffix: '_large_2x_2400w',
           extname: '.jpg',
         },
         withoutEnlargement: true,
       }, 
       {
-        width: 1600,
+        width: 1200,
         rename: {
-          suffix: '-1600px',
+          suffix: '_large_1x_1200w',
           extname: '.jpg',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 1500,
+        rename: {
+          suffix: '_medium_2x_1500w',
+          extname: '.jpg',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 750,
+        rename: {
+          suffix: '_medium_1x_750w',
+          extname: '.jpg',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 500,
+        rename: {
+          suffix: '_small_500w',
+          extname: '.jpg',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 2400,
+        rename: {
+          suffix: '_large_2x_2400w',
+          extname: '.webp',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 1200,
+        rename: {
+          suffix: '_large_1x_1200w',
+          extname: '.webp',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 1500,
+        rename: {
+          suffix: '_medium_2x_1500w',
+          extname: '.webp',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 750,
+        rename: {
+          suffix: '_medium_1x_750w',
+          extname: '.webp',
+        },
+        withoutEnlargement: true,
+      }, 
+      {
+        width: 500,
+        rename: {
+          suffix: '_small_500w',
+          extname: '.webp',
         },
         withoutEnlargement: true,
       }, 
@@ -26,7 +90,7 @@ gulp.task('images', function () {
     }, {
       // Global configuration for all images
       // The output quality for JPEG, WebP and TIFF output formats
-      quality: 50,
+      quality: 40,
       // Use progressive (interlace) scan for JPEG and PNG output
       progressive: true,
       // Strip all metadata
